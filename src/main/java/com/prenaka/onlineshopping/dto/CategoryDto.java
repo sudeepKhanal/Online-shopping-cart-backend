@@ -1,9 +1,18 @@
 package com.prenaka.onlineshopping.dto;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.OneToMany;
+
+import com.prenaka.onlineshopping.model.ProductEntity;
+
 public class CategoryDto extends BaseDto {
 
 	private String categoryName;
-	private String description;
+	private String categoryDescription;
+	@OneToMany
+	private List<ProductEntity> products = new ArrayList<>();
 
 	public String getCategoryName() {
 		return categoryName;
@@ -13,12 +22,20 @@ public class CategoryDto extends BaseDto {
 		this.categoryName = categoryName;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getCategoryDescription() {
+		return categoryDescription;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setCategoryDescription(String categoryDescription) {
+		this.categoryDescription = categoryDescription;
+	}
+
+	public List<ProductEntity> getProducts() {
+		return products;
+	}
+
+	public void setProducts(List<ProductEntity> products) {
+		this.products = products;
 	}
 
 }

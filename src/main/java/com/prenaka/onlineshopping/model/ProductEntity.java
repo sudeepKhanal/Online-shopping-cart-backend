@@ -1,21 +1,32 @@
 package com.prenaka.onlineshopping.model;
 
+import java.math.BigDecimal;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "product_tbl")
 public class ProductEntity extends BaseEntity {
+
 	private static final long serialVersionUID = 1L;
 
 	@Column(name = "product_name")
 	private String productName;
+	@Column(name = "product_status")
+	private Boolean productStatus;
+	@Column(name = "product_description")
+	private String productDescription;
+	@Column(name = "product_price")
+	private BigDecimal productPrice;
 	private int quantity;
-	private String description;
 	@Column(name = "category_id")
+	@ManyToOne
 	private CategoryEntity categoryId;
-	private String imagePath;
+	@Column(name = "product_image_path")
+	private String productImagePath;
 
 	public String getProductName() {
 		return productName;
@@ -23,6 +34,22 @@ public class ProductEntity extends BaseEntity {
 
 	public void setProductName(String productName) {
 		this.productName = productName;
+	}
+
+	public String getProductDescription() {
+		return productDescription;
+	}
+
+	public void setProductDescription(String productDescription) {
+		this.productDescription = productDescription;
+	}
+
+	public BigDecimal getProductPrice() {
+		return productPrice;
+	}
+
+	public void setProductPrice(BigDecimal productPrice) {
+		this.productPrice = productPrice;
 	}
 
 	public int getQuantity() {
@@ -33,14 +60,6 @@ public class ProductEntity extends BaseEntity {
 		this.quantity = quantity;
 	}
 
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
 	public CategoryEntity getCategoryId() {
 		return categoryId;
 	}
@@ -49,12 +68,12 @@ public class ProductEntity extends BaseEntity {
 		this.categoryId = categoryId;
 	}
 
-	public String getImagePath() {
-		return imagePath;
+	public String getProductImagePath() {
+		return productImagePath;
 	}
 
-	public void setImagePath(String imagePath) {
-		this.imagePath = imagePath;
+	public void setProductImagePath(String productImagePath) {
+		this.productImagePath = productImagePath;
 	}
 
 }

@@ -1,7 +1,11 @@
 package com.prenaka.onlineshopping.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -11,7 +15,10 @@ public class CategoryEntity extends BaseEntity {
 
 	@Column(name = "category_name")
 	private String categoryName;
-	private String description;
+	@Column(name = "category_description")
+	private String categoryDescription;
+	@OneToMany
+	private List<ProductEntity> products = new ArrayList<>();
 
 	public String getCategoryName() {
 		return categoryName;
@@ -21,12 +28,20 @@ public class CategoryEntity extends BaseEntity {
 		this.categoryName = categoryName;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getCategoryDescription() {
+		return categoryDescription;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setCategoryDescription(String categoryDescription) {
+		this.categoryDescription = categoryDescription;
+	}
+
+	public List<ProductEntity> getProducts() {
+		return products;
+	}
+
+	public void setProducts(List<ProductEntity> products) {
+		this.products = products;
 	}
 
 }

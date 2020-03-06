@@ -5,10 +5,12 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import com.prenaka.onlineshopping.dto.CategoryDto;
 import com.prenaka.onlineshopping.model.CategoryEntity;
 import com.prenaka.onlineshopping.repository.CategoryRepository;
 
+@Service
 public class CategoryServiceImpl implements CategoryService {
 
 	private final CategoryRepository categoryRepository;
