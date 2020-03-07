@@ -16,7 +16,7 @@ import com.prenaka.onlineshopping.service.UserService;
 import com.prenaka.onlineshopping.util.ServiceResponse;
 
 @RestController
-@RequestMapping("role")
+@RequestMapping("/users")
 public class UserController {
 
 	private final UserService userService;

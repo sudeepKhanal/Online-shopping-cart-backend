@@ -9,4 +9,3 @@ import com.prenaka.onlineshopping.model.OrderEntity;
 public interface OrderRepository extends JpaRepository<OrderEntity, Long> {
 
 }
-`

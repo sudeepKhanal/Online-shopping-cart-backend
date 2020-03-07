@@ -19,7 +19,7 @@ import com.prenaka.onlineshopping.service.ProductSercice;
 import com.prenaka.onlineshopping.util.ServiceResponse;
 
 @RestController
-@RequestMapping("category")
+@RequestMapping("categories")
 public class CategoryController {
 
 	private final CategoryService categorySercice;

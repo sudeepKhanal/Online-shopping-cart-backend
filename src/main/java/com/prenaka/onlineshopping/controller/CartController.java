@@ -18,7 +18,7 @@ import com.prenaka.onlineshopping.service.CartService;
 import com.prenaka.onlineshopping.util.ServiceResponse;
 
 @RestController
-@RequestMapping("cart")
+@RequestMapping("carts")
 public class CartController {
 
 	private final CartService cartSercice;

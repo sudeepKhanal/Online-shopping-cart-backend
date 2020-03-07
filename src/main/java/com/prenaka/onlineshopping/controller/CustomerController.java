@@ -17,7 +17,7 @@ import com.prenaka.onlineshopping.service.CustomerService;
 import com.prenaka.onlineshopping.util.ServiceResponse;
 
 @RestController
-@RequestMapping("customer")
+@RequestMapping("customers")
 public class CustomerController {
 
 	private final CustomerService customerSercice;

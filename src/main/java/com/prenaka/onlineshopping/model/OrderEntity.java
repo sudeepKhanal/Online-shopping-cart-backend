@@ -4,6 +4,7 @@ import java.time.Instant;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -12,7 +13,7 @@ public class OrderEntity extends BaseEntity {
 
 	private static final long serialVersionUID = 1L;
 
-	@Column(name = "order_customer_id")
+	@JoinColumn(name = "order_customer_id")
 	private CustomerEntity orderCustomerId;
 	@Column(name = "order_number")
 	private Long orderNumber;

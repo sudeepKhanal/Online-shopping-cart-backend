@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -19,7 +20,7 @@ public class CartEntity extends BaseEntity {
 	private List<ProductEntity> products = new ArrayList<>();
 	@Column(name = "total_price")
 	private BigDecimal totalPrice;
-	@Column(name = "customer_id")
+	@JoinColumn(name = "customer_id")
 	@OneToOne
 	private CustomerEntity customerId;
 

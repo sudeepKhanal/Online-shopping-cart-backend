@@ -17,7 +17,7 @@ import com.prenaka.onlineshopping.service.ProductSercice;
 import com.prenaka.onlineshopping.util.ServiceResponse;
 
 @RestController
-@RequestMapping("product")
+@RequestMapping("products")
 public class ProductController {
 	private final ProductSercice productSercice;
 

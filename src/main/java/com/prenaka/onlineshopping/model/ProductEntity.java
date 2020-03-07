@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -22,7 +23,7 @@ public class ProductEntity extends BaseEntity {
 	@Column(name = "product_price")
 	private BigDecimal productPrice;
 	private int quantity;
-	@Column(name = "category_id")
+	@JoinColumn(name = "category_id")
 	@ManyToOne
 	private CategoryEntity categoryId;
 	@Column(name = "product_image_path")

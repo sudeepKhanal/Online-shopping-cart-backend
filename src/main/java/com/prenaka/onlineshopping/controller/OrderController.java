@@ -17,7 +17,7 @@ import com.prenaka.onlineshopping.service.OrderService;
 import com.prenaka.onlineshopping.util.ServiceResponse;
 
 @RestController
-@RequestMapping("role")
+@RequestMapping("orders")
 public class OrderController {
 
 	private final OrderService orderService;
